@@ -5,7 +5,6 @@ const images = [
   { src: '/images/concrete1.jpg', alt: 'Concrete work 1' },
   { src: '/images/concrete2.jpg', alt: 'Concrete work 2' },
   { src: '/images/concrete3.jpg', alt: 'Concrete work 3' },
-  { src: '/images/concrete4.jpg', alt: 'Concrete work 4' },
   { src: '/images/concrete5.jpg', alt: 'Concrete work 5' },
 ];
 
