@@ -1,9 +1,11 @@
 import Link from "next/link";
+import ClientBody from "@/components/ClientBody";
 import BeforeAfterSection from "@/components/BeforeAfterSection";
 
 export default function HomePage() {
   return (
     <main>
+      {/* Hero Section */}
       <section
         className="relative min-h-[60vh] flex flex-col justify-center items-center bg-cover bg-center"
         style={{
@@ -33,7 +35,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Before and After Section */}
+      {/* ✅ New ClientBody Section (Before & Afters layout) */}
+      <ClientBody />
+
+      {/* ✅ Before and After Section */}
       <BeforeAfterSection
         projects={[
           {
