@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BeforeAfterSection from "@/components/BeforeAfterSection";
 
 export default function HomePage() {
   return (
@@ -31,6 +32,33 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
+
+      {/* Before and After Section */}
+      <BeforeAfterSection
+        projects={[
+          {
+            title: "Project 1",
+            before: "/images/before1.jpg",
+            after: "/images/after1.jpg",
+          },
+          {
+            title: "Project 2",
+            before: "/images/before2.jpg",
+            after: "/images/after2.jpg",
+          },
+          {
+            title: "Project 3",
+            before: "/images/before3.jpg",
+            after: "/images/after3.jpg",
+          },
+          {
+            title: "Project 4",
+            before: "/images/before4.jpg",
+            after: "/images/after4.jpg",
+          },
+        ]}
+      />
+
       <style>{`
         @keyframes fadein {
           0% { opacity: 0; transform: translateY(24px); }
