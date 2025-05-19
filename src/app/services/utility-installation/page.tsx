@@ -22,7 +22,9 @@ export default function UtilityInstallationPage() {
   return (
     <main className="max-w-2xl mx-auto px-4 py-16">
       <h1 className="text-3xl font-bold mb-4 text-[#0B1E4A]">Utility Installation</h1>
-      <p className="mb-6 text-black">We provide complete utility installation services—water, sewer, drainage, and power—ensuring safe, compliant systems to meet your needs today and tomorrow.</p>
+      <p className="mb-6 text-black">
+        We provide complete utility installation services—water, sewer, drainage, and power—ensuring safe, compliant systems to meet your needs today and tomorrow.
+      </p>
       <div className="w-full h-56 bg-slate-200 flex items-center justify-center rounded-lg shadow-inner relative overflow-hidden">
         <button
           aria-label="Previous"
