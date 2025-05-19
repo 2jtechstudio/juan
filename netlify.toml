@@ -10,5 +10,9 @@ remote_images = [
 command = "bun run build"
 publish = ".next"
 
+[build.environment]
+BUN_VERSION = "1.0.25"
+NETLIFY_NEXT_PLUGIN_SKIP = "true"
+
 [[plugins]]
 package = "@netlify/plugin-nextjs"
