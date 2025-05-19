@@ -16,38 +16,48 @@ export default function DemolitionPage() {
     return () => clearInterval(timer);
   }, []);
 
-  const goToPrev = () => setCurrent((prev) => (prev - 1 + images.length) % images.length);
-  const goToNext = () => setCurrent((prev) => (prev + 1) % images.length);
+  const goToPrev = () =>
+    setCurrent((prev) => (prev - 1 + images.length) % images.length);
+  const goToNext = () =>
+    setCurrent((prev) => (prev + 1) % images.length);
 
   return (
-    <main className="max-w-2xl mx-auto px-4 py-16">
-      <h1 className="text-3xl font-bold mb-4 text-[#0B1E4A]">Demolition</h1>
-      <p className="mb-6 text-black">We perform safe, efficient demolition work for structures of all sizes. Our team manages every aspect, from preparation to debris removal, ensuring your site is ready for what’s next.</p>
-      <div className="w-full h-56 bg-slate-200 flex items-center justify-center rounded-lg shadow-inner relative overflow-hidden">
-        <button
-          aria-label="Previous"
-          onClick={goToPrev}
-          className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/70 rounded-full p-2 shadow hover:bg-white z-10"
-        >
-          <span className="text-2xl text-[#0B1E4A]">&#8592;</span>
-        </button>
+    <main className="max-w-4xl mx-auto px-4 py-16">
+      <h1 className="text-4xl font-bold mb-6 text-[#0B1E4A]">Demolition</h1>
+      <p className="mb-8 text-black text-lg leading-relaxed">
+        We perform safe, efficient demolition work for structures of all sizes. Our team manages every aspect, from preparation to debris removal, ensuring your site is ready for what’s next.
+      </p>
+
+      <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden shadow-lg border border-slate-300">
         <img
           src={images[current].src}
           alt={images[current].alt}
-          className="object-cover w-full h-full rounded-lg transition-all duration-500"
+          className="w-full h-full object-cover transition-all duration-500"
         />
+
         <button
-          aria-label="Next"
+          onClick={goToPrev}
+          aria-label="Previous image"
+          className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 rounded-full p-2 hover:bg-white z-10"
+        >
+          <span className="text-2xl text-[#0B1E4A]">&#8592;</span>
+        </button>
+
+        <button
           onClick={goToNext}
-          className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/70 rounded-full p-2 shadow hover:bg-white z-10"
+          aria-label="Next image"
+          className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 rounded-full p-2 hover:bg-white z-10"
         >
           <span className="text-2xl text-[#0B1E4A]">&#8594;</span>
         </button>
-        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2">
+
+        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
           {images.map((_, idx) => (
             <span
               key={idx}
-              className={`block w-2 h-2 rounded-full ${idx === current ? 'bg-[#0B1E4A]' : 'bg-white/60'}`}
+              className={`w-3 h-3 rounded-full ${
+                idx === current ? 'bg-[#0B1E4A]' : 'bg-white/60'
+              }`}
             />
           ))}
         </div>
