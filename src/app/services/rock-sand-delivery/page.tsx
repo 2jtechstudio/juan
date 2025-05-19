@@ -23,7 +23,7 @@ export default function RockSandDeliveryPage() {
     <main className="max-w-2xl mx-auto px-4 py-16">
       <h1 className="text-3xl font-bold mb-4 text-[#0B1E4A]">Rock & Sand Delivery</h1>
       <p className="mb-6 text-black">We deliver a full range of rock, sand, and fill material straight to your site—on time and as specified. Get the materials you need to keep your project moving.</p>
-      <div className="w-full h-56 bg-slate-200 flex items-center justify-center rounded-lg shadow-inner relative overflow-hidden">
+      <div className="w-full h-96 bg-slate-200 flex items-center justify-center rounded-lg shadow-inner relative overflow-hidden">
         <button
           aria-label="Previous"
           onClick={goToPrev}

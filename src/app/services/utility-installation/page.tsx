@@ -25,7 +25,7 @@ export default function UtilityInstallationPage() {
       <p className="mb-6 text-black">
         We provide complete utility installation services—water, sewer, drainage, and power—ensuring safe, compliant systems to meet your needs today and tomorrow.
       </p>
-      <div className="w-full h-56 bg-slate-200 flex items-center justify-center rounded-lg shadow-inner relative overflow-hidden">
+      <div className="w-full h-96 bg-slate-200 flex items-center justify-center rounded-lg shadow-inner relative overflow-hidden">
         <button
           aria-label="Previous"
           onClick={goToPrev}

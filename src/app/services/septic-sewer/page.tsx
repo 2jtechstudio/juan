@@ -23,7 +23,7 @@ export default function SepticSewerPage() {
     <main className="max-w-2xl mx-auto px-4 py-16">
       <h1 className="text-3xl font-bold mb-4 text-[#0B1E4A]">Septic & Sewer</h1>
       <p className="mb-6 text-black">Our trained professionals install, repair, and service septic and sewer systems. We ensure clean, code-compliant work every time.</p>
-      <div className="w-full h-56 bg-slate-200 flex items-center justify-center rounded-lg shadow-inner relative overflow-hidden">
+      <div className="w-full h-96 bg-slate-200 flex items-center justify-center rounded-lg shadow-inner relative overflow-hidden">
         <button
           aria-label="Previous"
           onClick={goToPrev}

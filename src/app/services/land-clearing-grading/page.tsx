@@ -26,7 +26,7 @@ export default function LandClearingGradingPage() {
     <main className="max-w-2xl mx-auto px-4 py-16">
       <h1 className="text-3xl font-bold mb-4 text-[#0B1E4A]">Land Clearing & Grading</h1>
       <p className="mb-6 text-black">Let us prepare your property for construction or landscaping with expert land clearing and grading services. We level, smooth, and clear sites for safe, ready-to-build results.</p>
-      <div className="w-full h-56 bg-slate-200 flex items-center justify-center rounded-lg shadow-inner relative overflow-hidden">
+      <div className="w-full h-96 bg-slate-200 flex items-center justify-center rounded-lg shadow-inner relative overflow-hidden">
         <button
           aria-label="Previous"
           onClick={goToPrev}

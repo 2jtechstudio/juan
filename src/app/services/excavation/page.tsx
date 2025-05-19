@@ -25,7 +25,7 @@ export default function ExcavationPage() {
     <main className="max-w-2xl mx-auto px-4 py-16">
       <h1 className="text-3xl font-bold mb-4 text-[#0B1E4A]">Excavation</h1>
       <p className="mb-6 text-black">Our excavation services provide precise site preparation and digging, ensuring your project starts with a solid foundation. We bring experience and a professional fleet to every job—large or small.</p>
-      <div className="w-full h-56 bg-slate-200 flex items-center justify-center rounded-lg shadow-inner relative overflow-hidden">
+      <div className="w-full h-96 bg-slate-200 flex items-center justify-center rounded-lg shadow-inner relative overflow-hidden">
         <button
           aria-label="Previous"
           onClick={goToPrev}

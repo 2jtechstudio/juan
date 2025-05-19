@@ -28,7 +28,7 @@ export default function DemolitionPage() {
         We perform safe, efficient demolition work for structures of all sizes. Our team manages every aspect, from preparation to debris removal, ensuring your site is ready for what’s next.
       </p>
 
-      <div className="relative w-full h-64 md:h-96 rounded-lg overflow-hidden shadow-lg border border-slate-300">
+      <div className="relative w-full h-96 md:h-[32rem] rounded-lg overflow-hidden shadow-lg border border-slate-300">
         <img
           src={images[current].src}
           alt={images[current].alt}

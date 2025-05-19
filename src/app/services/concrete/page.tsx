@@ -26,7 +26,7 @@ export default function ConcretePage() {
     <main className="max-w-2xl mx-auto px-4 py-16">
       <h1 className="text-3xl font-bold mb-4 text-[#0B1E4A]">Concrete</h1>
       <p className="mb-6 text-black">We offer expert concrete pouring and finishing for foundations, sidewalks, driveways, and more. Depend on us for smooth, strong, and lasting results.</p>
-      <div className="w-full h-56 bg-slate-200 flex items-center justify-center rounded-lg shadow-inner relative overflow-hidden">
+      <div className="w-full h-96 bg-slate-200 flex items-center justify-center rounded-lg shadow-inner relative overflow-hidden">
         <button
           aria-label="Previous"
           onClick={goToPrev}
