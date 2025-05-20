@@ -70,7 +70,7 @@ export default function BeforeAfterSection() {
               </p>
 
               {/* constrain slider height so it fits */}
-              <div className="w-full h-48">
+              <div className="w-full h-30">
                 <BeforeAfterSlider
                   beforeImage={project.beforeImage}
                   afterImage={project.afterImage}
