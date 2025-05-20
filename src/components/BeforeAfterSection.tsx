@@ -18,19 +18,19 @@ const projects: Project[] = [
   },
   {
     id: "foundation-1",
-    title: "Commercial Foundation",
+    title: "Debris Removal",
     beforeImage: "/images/before2.jpg",
     afterImage: "/images/after2.jpg",
   },
   {
     id: "excavation-1",
-    title: "Residential Excavation",
+    title: "Residential Land Clearing and Gravel Driveway ",
     beforeImage: "/images/before3.jpg",
     afterImage: "/images/after3.jpg",
   },
   {
     id: "septic-1",
-    title: "Septic System Installation",
+    title: "Residential Cement Removal and Grading",
     beforeImage: "/images/before4.jpg",
     afterImage: "/images/after4.jpg",
   },
