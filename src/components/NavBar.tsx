@@ -1,29 +1,24 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Lock scroll when mobile menu is open
-  useEffect(() => {
-    document.body.classList.toggle("overflow-hidden", isOpen);
-  }, [isOpen]);
-
   return (
     <header className="bg-white shadow z-50">
-      <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-        {/* Logo */}
-        <Link href="/">
-          <span className="text-2xl font-bold text-[#0B1E4A]">H&I Construction</span>
+      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+        {/* Logo / Brand */}
+        <Link href="/" className="text-2xl font-bold text-[#0B1E4A]">
+          H&I Construction
         </Link>
 
-        {/* Hamburger button */}
+        {/* Hamburger on mobile */}
         <button
-          onClick={() => setIsOpen((v) => !v)}
+          onClick={() => setIsOpen(v => !v)}
           className="md:hidden p-2 focus:outline-none"
-          aria-label="Toggle navigation menu"
+          aria-label="Toggle menu"
           aria-expanded={isOpen}
           aria-controls="main-navigation"
         >
@@ -42,20 +37,16 @@ export default function NavBar() {
           </svg>
         </button>
 
-        {/* Menu links */}
+        {/* Links */}
         <nav
           id="main-navigation"
-          className={`
-            ${isOpen ? "block" : "hidden"}
-            md:block
-            transition-all duration-200 ease-out
-          `}
+          className={`${isOpen ? "block" : "hidden"} md:block`}
         >
           <ul className="flex flex-col md:flex-row md:space-x-6">
             {[
               { href: "/", label: "Home" },
               { href: "/services", label: "Services" },
-              { href: "/about", label: "About Us" },
+              { href: "/about-us", label: "About Us" },
               { href: "/contact", label: "Contact" },
             ].map(({ href, label }) => (
               <li key={href}>
