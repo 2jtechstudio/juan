@@ -11,7 +11,7 @@ export default function HomePage() {
           className="relative min-h-[60vh] flex flex-col justify-center items-center bg-cover bg-center"
           style={{
             backgroundImage:
-              "url(https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80)",
+              "url('/images/hero.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-[#0B1E4A] bg-opacity-70" />
