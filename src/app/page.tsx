@@ -22,7 +22,7 @@ export default function HomePage() {
                 textShadow: "0 2px 16px rgba(11,30,74,.18)",
               }}
             >
-              H&amp;I Construction
+              H&amp;I CONSTRUCTION LLC
             </h1>
             <p className="text-blue-100 text-xl md:text-2xl font-semibold mb-8 animate-fadein delay-200">
               Serving Tri-Cities, Walla Walla, Yakima, Grandview, Prosser, and Sunnyside, WA
