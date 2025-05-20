@@ -12,25 +12,25 @@ interface Project {
 const projects: Project[] = [
   {
     id: "land-clearing-1",
-    title: "Residential Land Clearing & Gravel Delivery",
+    title: "Residential Land Clearing",
     beforeImage: "/images/before1.jpg",
     afterImage: "/images/after1.jpg",
   },
   {
     id: "foundation-1",
-    title: "Debris Clearing",
+    title: "Commercial Foundation",
     beforeImage: "/images/before2.jpg",
     afterImage: "/images/after2.jpg",
   },
   {
     id: "excavation-1",
-    title: "Residential Land Clearing & Gravel Delivery",
+    title: "Residential Excavation",
     beforeImage: "/images/before3.jpg",
     afterImage: "/images/after3.jpg",
   },
   {
     id: "septic-1",
-    title: "Concrete Removal & Grading",
+    title: "Septic System Installation",
     beforeImage: "/images/before4.jpg",
     afterImage: "/images/after4.jpg",
   },
@@ -44,16 +44,15 @@ export default function BeforeAfterSection() {
           Before & After Projects
         </h2>
 
-        <div className="grid grid-cols-2 grid-rows-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           {projects.map((project) => (
-            <div
-              key={project.id}
-              className="space-y-4 max-w-sm mx-auto text-center"
-            >
+            <div key={project.id} className="space-y-4 text-center">
               <h3 className="text-2xl font-semibold text-[#0B1E4A]">
                 {project.title}
               </h3>
-              <div className="w-full h-30">
+
+              {/* uniform 4:3 box */}
+              <div className="w-full aspect-[4/3]">
                 <BeforeAfterSlider
                   beforeImage={project.beforeImage}
                   afterImage={project.afterImage}
