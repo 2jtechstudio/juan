@@ -53,20 +53,31 @@ export default function BeforeAfterSection() {
         <h2 className="text-3xl font-bold text-center text-[#0B1E4A] mb-12">
           Before & After Projects
         </h2>
-        <div className="grid gap-12">
+
+        {/* 2x2 grid, with a decent gap */}
+        <div className="grid grid-cols-2 grid-rows-2 gap-8">
           {projects.map((project) => (
-            <div key={project.id} className="space-y-4">
-              <div className="text-center">
-                <h3 className="text-2xl font-semibold text-[#0B1E4A]">{project.title}</h3>
-                <p className="text-gray-700">{project.description}</p>
-                <p className="text-sm text-gray-500 italic">{project.location}</p>
+            <div
+              key={project.id}
+              className="space-y-4 max-w-sm mx-auto text-center"
+            >
+              <h3 className="text-2xl font-semibold text-[#0B1E4A]">
+                {project.title}
+              </h3>
+              <p className="text-gray-700">{project.description}</p>
+              <p className="text-sm text-gray-500 italic">
+                {project.location}
+              </p>
+
+              {/* constrain slider height so it fits */}
+              <div className="w-full h-48">
+                <BeforeAfterSlider
+                  beforeImage={project.beforeImage}
+                  afterImage={project.afterImage}
+                  altBefore={`${project.title} Before`}
+                  altAfter={`${project.title} After`}
+                />
               </div>
-              <BeforeAfterSlider
-                beforeImage={project.beforeImage}
-                afterImage={project.afterImage}
-                altBefore={`${project.title} Before`}
-                altAfter={`${project.title} After`}
-              />
             </div>
           ))}
         </div>
