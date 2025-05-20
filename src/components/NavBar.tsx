@@ -1,26 +1,32 @@
-// src/components/NavBar.tsx
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Lock scroll when mobile menu is open
+  useEffect(() => {
+    document.body.classList.toggle("overflow-hidden", isOpen);
+  }, [isOpen]);
+
   return (
-    <header className="bg-white shadow">
+    <header className="bg-white shadow z-50">
       <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <Link href="/">
-          <img src="/logo@2x.png" alt="H&I Logo" className="h-8" />
+          <span className="text-2xl font-bold text-[#0B1E4A]">H&I Construction</span>
         </Link>
 
-        {/* Hamburger button - only on mobile */}
+        {/* Hamburger button */}
         <button
+          onClick={() => setIsOpen((v) => !v)}
           className="md:hidden p-2 focus:outline-none"
-          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle navigation menu"
+          aria-expanded={isOpen}
+          aria-controls="main-navigation"
         >
-          {/* Simple 3-line icon */}
           <svg
             className="w-6 h-6 text-gray-800"
             fill="none"
@@ -38,49 +44,30 @@ export default function NavBar() {
 
         {/* Menu links */}
         <nav
+          id="main-navigation"
           className={`
             ${isOpen ? "block" : "hidden"}
             md:block
-            absolute top-full left-0 w-full bg-white md:static md:w-auto
+            transition-all duration-200 ease-out
           `}
         >
-          <ul className="flex flex-col md:flex-row md:space-x-6 p-4 md:p-0">
-            <li>
-              <Link
-                href="/"
-                className="block py-2 text-gray-800 hover:text-[#0B1E4A]"
-                onClick={() => setIsOpen(false)}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/services"
-                className="block py-2 text-gray-800 hover:text-[#0B1E4A]"
-                onClick={() => setIsOpen(false)}
-              >
-                Services
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/about"
-                className="block py-2 text-gray-800 hover:text-[#0B1E4A]"
-                onClick={() => setIsOpen(false)}
-              >
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/contact"
-                className="block py-2 text-gray-800 hover:text-[#0B1E4A]"
-                onClick={() => setIsOpen(false)}
-              >
-                Contact
-              </Link>
-            </li>
+          <ul className="flex flex-col md:flex-row md:space-x-6">
+            {[
+              { href: "/", label: "Home" },
+              { href: "/services", label: "Services" },
+              { href: "/about", label: "About Us" },
+              { href: "/contact", label: "Contact" },
+            ].map(({ href, label }) => (
+              <li key={href}>
+                <Link
+                  href={href}
+                  className="block px-4 py-2 text-gray-800 hover:text-[#0B1E4A]"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
       </div>
